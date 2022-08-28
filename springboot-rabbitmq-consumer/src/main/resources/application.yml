@@ -5,3 +5,17 @@ spring:
     password: admin
     host: localhost
     port: 5672
+
+    # 设置手动ack
+    listener:
+      direct:
+        acknowledge-mode: manual
+        # 设置限流
+        prefetch: 1
+      simple:
+        # 手动ack
+        acknowledge-mode: manual
+
+        # 每次拉去消息数量
+        prefetch: 1
+

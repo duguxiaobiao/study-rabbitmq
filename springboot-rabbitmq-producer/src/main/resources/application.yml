@@ -5,3 +5,9 @@ spring:
     password: admin
     host: localhost
     port: 5672
+
+    #开启消息的可靠传递
+    publisher-confirm-type: correlated
+
+    #开启消息的退回模式
+    publisher-returns: true
